@@ -7,6 +7,7 @@ import RegisterPage from './components/jwt/RegisterPage'
 import ForgotPasswordPage from './components/jwt/ForgotPasswordPage'
 import EmailVerificationPage from './components/jwt/EmailVerificationPage'
 import SetNewPasswordPage from './components/jwt/SetNewPasswordPage'
+import Estimer from './EstimerApp'
 
 function App() {
   
@@ -15,12 +16,14 @@ function App() {
     <>
      <BrowserRouter>
      <Routes>
-      <Route path='/' element={<LoginPage></LoginPage>} />
+      <Route path='/login' element={<LoginPage></LoginPage>} />
       <Route path='/dashboard' element={<EstimerApp></EstimerApp>}></Route>
       <Route path='/signup' element={<RegisterPage></RegisterPage>}></Route>
       <Route path='/forgot' element={<ForgotPasswordPage></ForgotPasswordPage>}></Route>
       <Route path='/verification' element={<EmailVerificationPage></EmailVerificationPage>}></Route>
       <Route path='/setnewpassword' element={<SetNewPasswordPage></SetNewPasswordPage>}></Route>
+      {/* main dashbaord */}
+      <Route path='/' element={<Estimer></Estimer>}></Route>
      </Routes>
      </BrowserRouter>
     </>
